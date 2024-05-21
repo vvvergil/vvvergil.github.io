@@ -62,3 +62,4 @@ theme: vivia
 deploy:
   type: 'git'
   repo: https://github.com/vvvergil/vvvergil.github.io.git
+  branch: gh-pages
