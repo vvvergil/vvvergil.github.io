@@ -31,10 +31,10 @@ links:
     url: https://twitter.com
   - name: Steam
     icon: fa-brands fa-steam
-    url: https://store.steampowered.com
+    url: https://steamcommunity.com/profiles/76561198365968705/
   - name: GitHub
     icon: fa-brands fa-github
-    url: https://github.com
+    url: https://github.com/vvvergil
 
 # 侧边栏
 sidebar:
