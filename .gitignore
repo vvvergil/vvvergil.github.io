@@ -6,5 +6,6 @@ node_modules/
 public/*
 !public/googled410eabb58ead5bd.html
 !public/BingSiteAuth.xml
+!public/baidu_verify_codeva-XpMi7pujIP.html
 .deploy*/
 _multiconfig.yml
