@@ -1,9 +1,11 @@
 ---
-title: 有关服务器渲染(SSR)的一些技术
+title: 服务器端渲染(SSR)的定义和相关技术
 date: 2023-09-1 20:17:44
 categories: 前端技术
 tags: [Web,http]
+
 ---
+
 # SPA与MPA
 
 |           | 单页面应用(SPA)    | 多页面应用(MPA)                  |

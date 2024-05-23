@@ -3,7 +3,9 @@ title: 面经-JS
 date: 2022-08-01
 categories: 面经
 tags: [面经,js]
+
 ---
+
 ## 1.数据类型
 
 JS有==6==个基本类型，分别为String；Number；Boolean；Undefined；Symbol；null；

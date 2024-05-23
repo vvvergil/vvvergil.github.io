@@ -3,7 +3,9 @@ title: 面经-ES6
 date: 2022-08-01
 categories: 面经
 tags: [面经,js]
+
 ---
+
 ## 1.变量
 
 let 和 const 都是ES6新增的两种命令，其和var的不同之处在于：（1）var存在变量提升，即var可以在声明前调用，值为undefined （2）let和const存在暂时性死区，即在声明之后才能使用变量 （3）let和const有块级作用域，var只有函数级作用域 （4）var允许重复声明，let和const在同一作用域中不允许重复声明。
