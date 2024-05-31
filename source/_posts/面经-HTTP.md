@@ -156,3 +156,35 @@ http2.0
 ## 对WebSocket的理解
 
 是一种网络传输协议，位于应用层，可以在单个TCP连接上进行全双工通信，能更好的节省服务器资源并达到实时通讯。
+
+## Cookie有哪些属性
+
+1. name。指定了Cookie名称
+
+2. value。指定了Cookie的值
+
+3. expires。指定了Cookie的过期时间，具体日期
+
+4. max-age。指定了Cookie的过期时间，比expires更加精确，毫秒数
+
+5. domain。指定了可以访问Cookie的域，默认为创建Cookie的域
+
+6. path。指定了可以访问Cookie的URL路径，默认为创建Cookie的路径
+
+7. secure。二元属性，若有该属性，则只在https协议时才发送Cookie
+
+8. HttpOnly。二元属性，若有该属性，则禁止JS读取Cookie
+
+9. SameSit。控制跨站点请求时是否发送Cookie
+
+## Options请求的作用
+
+Options请求方法是HTTP协议中的一种请求方法，用于客户端向服务器询问特定资源或服务器的通信选项和要求。它主要有以下几个用途：
+
+1. 检查服务器支持的HTTP方法
+
+2. 预检请求  检查是否允许跨域请求
+
+3. 获取通信选项  例如支持的内容类型、允许的请求头等
+
+4. 测试  开发者可以使用Options请求测试和调试服务器的响应能力和配置。

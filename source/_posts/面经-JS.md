@@ -432,3 +432,27 @@ function debounce(fn,wait){
 ## JS是单线程的还是多线程的
 
 JS是一门单线程的语言。虽然使用Web Workers API可以实现JS多线程并行运行，但它的本质是利用了浏览器的多线程框架，创建了多个JS引擎实例，定义了一种引擎间的通讯方法来实现的多线程。而JS的单线程指的是在一个JS引擎中执行JS脚本，引擎只会分配一个线程给他。
+
+## script标签的async和defer分别有什么作用
+
+**async**：异步加载脚本，一旦脚本加载完成便立刻执行，执行顺序取决于加载顺序，与本身顺序无关。
+
+**defer**：延迟执行脚本，等待页面渲染完成后顺序加载脚本，脚本依赖DOM时选择这个
+
+## 前端性能优化指标
+
+- FP(First Paint): 首次绘制时间，用于记录页面第一次绘制像素的时间。
+
+- FCP(First Contentful Paint): 首次内容绘制时间，这个指标用于记录页面首次绘制文本、图片、非空白Canvas或SVG的时间
+
+- FMP(First Meaningful Paint): 首次有意义的渲染帧，从页面加载开始，到大部分或者主要内容已经在首屏上渲染的时间点
+
+- LCP(Largest Contentful Paint)：最大内容绘制时间，用于记录视窗内最大的元素绘制的时间
+
+- CLS(Cumulative Layout Shift): 累积布局偏移，记录了页面上非预期的位移波动。
+
+- TTI(Time to Interactive): 首次可交互时间
+
+- FID(First Input Delay): 首次输入延迟时间，记录在FCP和TTI之间用户首次与页面交互时响应的延迟。
+
+- TBT(Total Blocking Time): 阻塞总时间，记录在FCP到TTI之间所有长任务的阻塞时间总和。

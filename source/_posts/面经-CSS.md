@@ -169,3 +169,141 @@ CSS预处理器是扩展CSS语言的工具。通过添加一些额外的语法�
 - Canvas主要通过JS脚本来对整个画布操作的，而SVG则是基于xml元素的
 - SVG发布日期较早，功能较为完善
 - Canvas不能给某个图形添加事件处理函数，而SVG可以
+
+## CSS动画有哪些
+
+CSS动画指的是元素从一种样式过渡到另一种样式的过程。常见的动画效果有很多，如平移、旋转、缩放，复杂动画则是多个简单动画的组合。
+
+CSS实现动画的方式有以下几种：
+
+1. transition   实现渐变动画
+
+2. transform  转变动画
+
+3. animation  实现自定义动画
+
+### transition
+
+transiton的属性如下：
+
+- property：填写需要变化的属性
+
+- duration：完成过渡效果需要的时间(s或ms)
+
+- timing-function：完成效果的速度曲线
+
+- delay：动画效果延迟触发时间
+
+例子：当光标移入时触发动画
+
+```html
+<style>
+       .base {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            background-color: #0EA9FF;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #5daf34;
+            transition-property: width, height, background-color, border-width;
+            transition-duration: 2s;
+            transition-timing-function: ease-in;
+            transition-delay: 500ms;
+        }
+
+        /*简写*/
+        /*transition: all 2s ease-in 500ms;*/
+        .base:hover {
+            width: 200px;
+            height: 200px;
+            background-color: #5daf34;
+            border-width: 10px;
+            border-color: #3a8ee6;
+        }
+</style>
+<div class="base"></div>
+```
+
+### transform
+
+包含常用的四个功能：
+
+- scale：缩放
+
+- translate：位移
+
+- rotate：旋转
+
+- skew：倾斜
+
+通常需要配合transition一起使用
+
+```html
+<style>
+    .base {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        background-color: #0EA9FF;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #5daf34;
+        transition-property: width, height, background-color, border-width;
+        transition-duration: 2s;
+        transition-timing-function: ease-in;
+        transition-delay: 500ms;
+    }
+    .base2 {
+        transform: none;
+        transition-property: transform;
+        transition-delay: 5ms;
+    }
+
+    .base2:hover {
+        transform: scale(0.8, 1.5) rotate(35deg) skew(5deg) translate(15px, 25px);
+    }
+</style>
+ <div class="base base2"></div>
+```
+
+### animation
+
+animation用于自定义动画
+
+首先使用@keyframes 定义关键帧，确定动画的起始状态和结束状态。定义好关键帧后再在元素中添加animation属性
+
+animation属性由以下几个子属性组成：
+
+- animation-name  指定@keyframes动画的名称
+
+- animation-duration  指定动画持续时间
+
+- animation-timing-function  指定动画的速度曲线
+
+- animation-delay  指定动画开始的延迟时间
+
+- animation-iteration-count  指定动画播放的次数
+
+- animation-direction  指定动画的方向
+
+- animation-fill-mode  指定动画的填充模式
+
+- animation-play-state  指定动画的播放状态
+
+例子：让元素旋转
+
+```css
+@keyframes rotate{
+  from{
+      transform: rotate(0deg);
+  }
+  to{
+      transform: rotate(360deg);
+ }
+}
+
+#target {
+  animation: rotate 2s
+}
+```
