@@ -1,9 +1,9 @@
-```yaml
+---
 title: web常见的攻击方式
 date: 2023-10-22
 categories: 前端技术
 tags: [Web,http]
-```
+---
 
 # web常见的攻击方式
 
